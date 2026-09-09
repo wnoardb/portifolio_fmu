@@ -35,7 +35,7 @@ header h1 {
 
 .links ul{
     display: flex;            /* Transforma a lista em uma linha horizontal */
-    justify-content: right;  /* Alinha os itens horizontalmente (pode usar space-around, space-between, etc.) */
+    justify-content: center;  /* Alinha os itens horizontalmente (pode usar space-around, space-between, etc.) */
     align-items: center;      /* Alinha os itens verticalmente no centro */
     list-style: none;         /* Remove as bolinhas da lista */
     gap: 20px;                /* Cria um espaçamento de 20px entre cada item */
@@ -43,5 +43,9 @@ header h1 {
     margin: 0;
     cursor: pointer;                /*Remove o recuo padrão da lista */
 }
+
+.perfil {
+    
+} 
 
 
