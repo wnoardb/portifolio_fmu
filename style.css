@@ -43,6 +43,15 @@ nav ul {
     margin-right: 50px;
 }
 
+nav ul li{
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover{
+    transform: translateY(-3px); /* Faz o botão subir levemente 3px na tela */
+    text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.6); /* Cria um leve brilho laranja ao fundo */
+}
+
 header h1 {
     margin: 0;
     color: orange;
@@ -56,24 +65,35 @@ header h2{
     margin-left: 40px;
 }
 
-.foto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
+/* ==================== MUDANÇAS NO CORPO DO SITE (MAIN) ==================== */
 
-.foto img{
-    width: 500px;
-    margin-left: 900px;
+/* O container principal agora coloca o texto e a foto lado a lado de forma automática */
+main {
+    display: flex;
+    justify-content: space-between; /* Texto na extrema esquerda, foto na extrema direita */
+    align-items: flex-start;        /* Alinha o topo do texto com o topo da foto */
+    padding: 40px;                  /* Adiciona um respiro nas laterais do site */
 }
 
-.apresentacao{
+/* Bloco de texto da esquerda */
+.apresentacao {
     width: 500px;
     color: orange;
-    font-style: bold;
-    margin-top: -450px;
-    margin-left: 50px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;              /* Corrigido de font-style para font-weight */
     font-size: larger;
+    margin-left: 40px;              /* Alinhado com a mesma margem do seu título do header */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Caixa onde fica a foto */
+.foto {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;             /* Alinhado com a mesma margem da sua navbar */
+} 
+
+/* Imagem de perfil */
+.foto img {
+    width: 450px;                   /* Ajustado para 450px para harmonizar melhor com os 500px do texto */
+    height: auto;
+}
