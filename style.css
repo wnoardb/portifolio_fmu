@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-body{
+body {
     background-color: rgb(22, 22, 22);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -13,30 +13,36 @@ header {
     padding-top: 20px;
 }
 
-/* Coloca o H1 e o Ícone na mesma linha (O ícone fica à direita por estar depois do H1 no HTML) */
+/* Coloca o nome e o ícone na mesma linha */
 .titulo-flex {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-left: 40px;   /* respiro da lateral, aplicado no bloco inteiro */
+    margin-left: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
-    transform: translateY(-3px); /* Faz o botão subir levemente 3px na tela */
+}
+
+/* Animação do nome e ícone */
+.titulo-flex:hover {
+    transform: translateY(-3px);
+    text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.6);
 }
 
 .titulo-texto {
     display: flex;
-    flex-direction: column;   /* empilha os dois textos na vertical */
-    gap: 2px;                 /* respiro pequeno entre nome e cargo (ajuste a gosto) */
+    flex-direction: column;
+    gap: 2px;
 }
 
-/* Estilização e cor do seu ícone Flaticon */
-.icone-dev {                      
-    width: 50px;                     /* maior, já que agora é decorativo */                   /* deixa discreto, como marca-d'água */
+/* Estilização e cor do ícone */
+.icone-dev {
+    width: 50px;
     filter: invert(58%) sepia(82%) saturate(2250%) hue-rotate(11deg) brightness(101%) contrast(101%);
     height: auto;
 }
-/* botões nav */
+
+/* Botões da nav */
 nav ul {
     display: flex;
     justify-content: right;
@@ -53,51 +59,64 @@ nav ul {
     font-size: larger;
 }
 
-nav ul li{
+nav ul li {
     transition: all 0.3s ease;
 }
 
-nav ul li:hover{
-    transform: translateY(-3px); /* Faz o botão subir levemente 3px na tela */
-    text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.6); /* Cria um leve brilho laranja ao fundo */
+nav ul li:hover {
+    transform: translateY(-3px);
+    text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.6);
 }
 
 header h2 {
-    margin: 0;                /* zera a margem de fábrica que afastava as linhas */
+    margin: 0;
     color: orange;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* ==================== MUDANÇAS NO CORPO DO SITE (MAIN) ==================== */
-
-/* O container principal agora coloca o texto e a foto lado a lado de forma automática */
+/* Corpo do site */
 main {
     display: flex;
-    justify-content: space-between; /* Texto na extrema esquerda, foto na extrema direita */
-    align-items: flex-start;        /* Alinha o topo do texto com o topo da foto */
-    padding: 40px;                  /* Adiciona um respiro nas laterais do site */
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+    gap: 80px;
 }
 
 /* Bloco de texto da esquerda */
 .apresentacao {
     width: 500px;
     color: orange;
-    font-weight: bold;              /* Corrigido de font-style para font-weight */
+    font-weight: bold;
     font-size: larger;
-    margin-right: 300px;              /* Alinhado com a mesma margem do seu título do header */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Título da apresentação */
+.apresentacao h2 {
+    margin-bottom: 10px;
+}
+
+/* Nome principal */
+.apresentacao h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+/* Parágrafos */
+.apresentacao p {
+    margin-bottom: 20px;
 }
 
 /* Caixa onde fica a foto */
 .foto {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 50px;             /* Alinhado com a mesma margem da sua navbar */
-} 
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
 
 /* Imagem de perfil */
 .foto img {
-    width: 450px;                   /* Ajustado para 450px para harmonizar melhor com os 500px do texto */
+    width: 450px;
     height: auto;
-    margin-left: 100px;
 }
